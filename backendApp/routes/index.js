@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send("Wel come to Crypto Payment Processor :) ");
+  res.send("Wel come to Crypto Payment Processor automated deployement is enabled :) ");
 });
 
 module.exports = router;
