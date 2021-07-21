@@ -40,7 +40,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+ 
+const port=process.env.PORT || 4000
 
-app.listen()
+app.listen(port,()=>{
+  console.log("app is running ")
+})
 
 
