@@ -41,10 +41,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
  
-const port=process.env.PORT || 4000
+const port=process.env.PORT || '4000';
 
 app.listen(port,()=>{
-  console.log("app is running ")
+  console.log(`server strted on port : ${port} `);
 })
 
 
