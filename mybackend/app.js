@@ -6,8 +6,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const port=process.env.PORT || '4000';
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -43,7 +41,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(port,()=>{
+app.listen(process.env.ports || 5000,()=>{
   console.log(`server strted on port : ${port} `);
 })
 
