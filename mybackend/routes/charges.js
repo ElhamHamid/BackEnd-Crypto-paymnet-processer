@@ -17,7 +17,7 @@ router.post('/', async (req, res) =>{
         "pricing_type": "fixed_price",
       }
  try {
-   const resp= await 	 axios.post('https://api.commerce.coinbase.com/charges',{"body":data},{
+   const resp= await axios.post('https://api.commerce.coinbase.com/charges',{"body":JSON.stringify(data)},{
     headers: {
      "Content-Type": "application/json",
     "X-CC-Api-Key": "377db512-71d1-48df-94fb-bbc62ee483d8" ,
