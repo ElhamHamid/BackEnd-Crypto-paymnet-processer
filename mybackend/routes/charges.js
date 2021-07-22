@@ -2,7 +2,7 @@
 /* eslint-disable */
 
 var express = require('express');
-const axios = require("axios").create({baseUrl:"https://api.commerce.coinbase.com/charges"})
+const axios = require("axios")
 var router = express.Router();
 
 // creating charges
