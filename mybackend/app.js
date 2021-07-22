@@ -41,8 +41,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(process.env.ports || 5000,()=>{
-  console.log(`server strted on port : ${port} `);
+app.listen(process.env.PORT || 5000,()=>{
+  console.log(`server started on port : ${port} `);
 })
 
 
