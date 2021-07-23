@@ -8,8 +8,8 @@ var router = express.Router();
 // creating charges
 router.post('/', async (req, res) =>{
     let data={
-        "name": "The Sovereign Individual",
-        "description": "Mastering the Transition to the Information Age",
+        "name": req.body.name,
+        "description": req.body.description,
         "local_price": {
           "amount": req.body.price,
           "currency": "USD"
