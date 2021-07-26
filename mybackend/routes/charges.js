@@ -15,6 +15,7 @@ router.post('/', async (req, res) =>{
           "currency": "USD"
         },
         "pricing_type": "fixed_price",
+        "redirect_url": " https://crypto-processer-back-end-app.herokuapp.com/",
       }
  try {
    const resp= await axios.post('https://api.commerce.coinbase.com/charges',data,{
