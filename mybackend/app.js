@@ -22,13 +22,13 @@ app.use(
   express.static(path.join(__dirname, "public/crypto-payment-processer"))
 );
 app.use(cors());
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   fs.createReadStream(
     path.join(__dirname, "public/crypto-payment-processer/index.html")
   ).pipe(res);
 });
 app.use("/charges", chargesRouter);
-app.use("*",(req, res) => {
+app.get("*", (req, res) => {
   fs.createReadStream(
     path.join(__dirname, "public/crypto-payment-processer/index.html")
   ).pipe(res);
