@@ -22,11 +22,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public\crypto-payment-processer')));
 app.use(cors());
 app.use('/', (req,res)=>{
-  fs.createReadStream(dirname + 'public/crypto-payment-processer/index.html').pipe(res);
+  fs.createReadStream(__dirname + 'public/crypto-payment-processer/index.html').pipe(res);
 });
 app.use('/charges',chargesRouter);
 app.use('*',(req,res)=>{
-  fs.createReadStream(dirname + 'public/crypto-payment-processer/index.html').pipe(res);
+  fs.createReadStream(__dirname + 'public/crypto-payment-processer/index.html').pipe(res);
 })
 
 // error handler
